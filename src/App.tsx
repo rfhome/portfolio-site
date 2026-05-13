@@ -317,8 +317,7 @@ function Experience() {
               <div key={i} className="md:pl-10 relative">
                 <div className="hidden md:flex absolute left-0 top-1 w-4 h-4 rounded-full bg-teal-600 border-2 border-white shadow" />
                 <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-teal-200 transition-colors">
-                  <h3 className="text-lg font-bold text-gray-900">{job.role}</h3>
-                  <p className="text-teal-600 font-semibold text-sm mb-3">{job.company}</p>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">{job.role}</h3>
                   <ul className="space-y-1.5">
                     {job.bullets.map((b, j) => (
                       <li key={j} className="flex gap-2 text-sm text-gray-600">
