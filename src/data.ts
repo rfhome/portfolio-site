@@ -10,7 +10,7 @@ export const hero = {
   name: 'Roberto Fonseca',
   title: 'Technology Executive',
   tagline:
-    '20+ years delivering Oracle Energy & Water CIS modernization programs across North America. CTO, solution architect, and builder — bridging technical complexity with business strategy.',
+    'Vast experience delivering Oracle Energy & Water modernization programs across North America. CTO, solution architect, and builder — bridging technical complexity with business strategy.',
   linkedIn: 'https://www.linkedin.com/in/rfonseca/',
   location: 'Rochester, NY',
   availability: 'Available for consulting and full-time opportunities',
@@ -84,17 +84,17 @@ export const experience: { role: string; bullets: string[] }[] = [
     ],
   },
   {
-    role: 'Director, Solution Center / Solution Architect',
+    role: 'Director, Consulting Services / Solution Architect',
     bullets: [
-      'Managed delivery for major Oracle Energy & Water CIS implementations across USA and Canada.',
+      'Managed delivery for major Oracle Energy & Water implementations across USA and Canada.',
       'Directed functional and technical design teams; ensured project profitability through optimized resource allocation.',
-      'Oversaw development and QA of custom CIS solutions for utilities clients.',
+      'Oversaw development and QA of custom solutions for utilities clients.',
     ],
   },
   {
     role: 'Application Support Team Leader',
     bullets: [
-      'Supported Oracle/SPL CIS solutions across multiple clients.',
+      'Supported Oracle/SPL CIS solutions across multiple utility clients.',
       'Built long-term client relationships through direct engagement and responsive support.',
       'Led development team designing and implementing business processes for various clients.',
     ],
@@ -102,10 +102,10 @@ export const experience: { role: string; bullets: string[] }[] = [
   {
     role: 'Senior Consultant',
     bullets: [
-      'Supported integrations for CIS subsystems at Rochester Gas and Electric.',
+      'Supported integrations for SPL CIS subsystems at utility company.',
       'Delivered system enhancements for regulatory compliance: billing, EDI, and partner integrations.',
-      'Reengineered the Corrosion System into Natural/ADABAS for the PAWS initiative.',
-      'Led technical assessments and Y2K compliance implementations at General Reinsurance Corp.',
+      'Reengineered legacy systems into modern languages/platforms.',
+      'Led technical assessments and Y2K compliance implementations at a major financial institution.',
     ],
   },
 ]
