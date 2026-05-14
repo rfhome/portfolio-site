@@ -1,132 +1,11 @@
 import { useState, useEffect, useRef } from 'react'
 import { Turnstile, type TurnstileInstance } from '@marsidev/react-turnstile'
+import {
+  hero, stats, about, expertise, experience,
+  projects, certifications, education,
+} from './data'
 
-// ── Data ────────────────────────────────────────────────────────────────────
-
-const expertise = [
-  'Utility CIS Transformation', 'Oracle CC&B / C2M / CCS / MDM',
-  'Technical Architecture', 'Project & Team Leadership', 'Cloud Migrations',
-  'SDLC Oversight', 'Client Advisory & Executive Stakeholder Management',
-  'RFP Response & Pricing Strategy', 'Business Development', 'Partner Engagement',
-  'SOW & Contract Alignment', 'Process Improvement', 'Cross-team Collaboration',
-]
-
-const experience = [
-  {
-    company: 'USP – Utility Solutions Partners',
-    role: 'Senior Project Manager',
-    bullets: [
-      'Leads direct client engagement across active accounts as primary point of contact throughout the project lifecycle.',
-      'Manages existing Managed Services Program supporting a team of 5 resources and ~$1M in annual recurring revenue.',
-      'Directs a large-scale Oracle C2M implementation with a cross-functional team of 15 resources and a ~$5M 2-year budget.',
-    ],
-  },
-  {
-    company: 'BHC Global',
-    role: 'Chief Technology Officer / Delivery Manager',
-    bullets: [
-      'Developed pricing and staffing models supporting $20M+ in proposals and delivery plans.',
-      'Grew a single managed services engagement into a multi-year, multi-project portfolio — increasing revenue by $1.5M+ YOY.',
-      'Led Agile delivery teams of up to 20 individuals in a hybrid onshore/offshore/nearshore model.',
-      'Directed migration of internal infrastructure to cloud platforms (AWS, Oracle) to align with client cybersecurity standards.',
-      'Engaged directly at Steering Committee and Board level throughout the project lifecycle.',
-    ],
-  },
-  {
-    company: 'BHC Global',
-    role: 'Director, Solution Center / Solution Architect',
-    bullets: [
-      'Managed delivery for major Oracle Energy & Water CIS implementations across USA and Canada.',
-      'Directed functional and technical design teams; ensured project profitability through optimized resource allocation.',
-      'Oversaw development and QA of custom CIS solutions for utilities clients.',
-    ],
-  },
-  {
-    company: 'BHC Global',
-    role: 'Application Support Team Leader',
-    bullets: [
-      'Supported Oracle/SPL CIS solutions across multiple clients.',
-      'Built long-term client relationships through direct engagement and responsive support.',
-      'Led development team designing and implementing business processes for various clients.',
-    ],
-  },
-  {
-    company: 'CGI',
-    role: 'Senior Consultant',
-    bullets: [
-      'Supported integrations for CIS subsystems at Rochester Gas and Electric.',
-      'Delivered system enhancements for regulatory compliance: billing, EDI, and partner integrations.',
-      'Reengineered the Corrosion System into Natural/ADABAS for the PAWS initiative.',
-      'Led technical assessments and Y2K compliance implementations at General Reinsurance Corp.',
-    ],
-  },
-]
-
-const projects = [
-  {
-    name: 'Project Estimator',
-    tagline: 'Multi-tenant SaaS for project scoping & tracking',
-    description:
-      'Full-stack SaaS for generating professional project estimates. Features a Gantt builder, resource planning grid, travel estimates, budget dashboard with burn-rate analysis, version snapshots with diff viewer, Excel export, and CSV import for actuals.',
-    tech: ['React', 'TypeScript', 'FastAPI', 'PostgreSQL', 'AG Grid', 'Tailwind'],
-    url: 'https://estimator.catalystedgeconnect.com',
-    icon: '📊',
-  },
-  {
-    name: 'Config Workbook Tool',
-    tagline: 'Lean configuration & Excel export tooling',
-    description:
-      'Tool for managing Oracle CIS project configurations without portal sprawl. Centralizes client metadata, encrypted data source connections, and stored queries — with direct Excel workbook export and saved export history.',
-    tech: ['React', 'TypeScript', 'FastAPI', 'PostgreSQL'],
-    url: 'https://config.catalystedgeconnect.com',
-    icon: '⚙️',
-  },
-  {
-    name: 'Oracle ERD Builder',
-    tagline: 'Visual schema explorer for Oracle databases',
-    description:
-      'FastAPI + React app for connecting to Oracle databases, pulling schema metadata, and rendering interactive ERD-style relationship graphs. Supports recursive graph expansion, inferred relationship review, named sessions, and export to SVG, PNG, and PDF.',
-    tech: ['React', 'FastAPI', 'React Flow', 'Oracle DB', 'Docker'],
-    url: 'https://erd.catalystedgeconnect.com',
-    icon: '🗄️',
-  },
-  {
-    name: 'GoalMate',
-    tagline: 'Privacy-first habit & goal tracker',
-    description:
-      'Mobile app for building and tracking habits across iOS and Android. Supports flexible goal frequencies (daily, weekly, weekday), anchor times, calendar views, streaks, badges, leaderboards, and local notifications.',
-    tech: ['Expo', 'React Native', 'Supabase', 'TypeScript'],
-    url: null,
-    icon: '🎯',
-  },
-  {
-    name: 'OST to PST Tool',
-    tagline: 'Desktop tool for Outlook archive conversion',
-    description:
-      'Electron desktop application for converting Microsoft Outlook OST archives to portable mbox exports. Ships with a GUI (file pickers, progress tracking) and a CLI wrapper for automated use. Powered by libpst for faithful folder and attachment preservation.',
-    tech: ['Electron', 'TypeScript', 'libpst', 'Node.js'],
-    url: null,
-    icon: '📧',
-  },
-]
-
-const certifications = {
-  'Project Management & AI': [
-    'Change Management for Generative AI – Vanderbilt University',
-    'Talking to AI: Prompt Engineering for Project Managers – PMI',
-    'Fundamentals of Agentic AI – LinkedIn Learning',
-    'Building AI Agents using Docker, n8n, OpenAI Platform',
-    'Google Data Analytics Professional Certificate',
-    'Learning ITIL – LinkedIn Learning',
-  ],
-  'Business & Strategy': [
-    'Financial Markets – Yale University',
-    'Fundamentals of Quantitative Modeling – University of Pennsylvania',
-    'Introduction to Trading, Machine Learning and GCP',
-  ],
-}
-
-// ── Nav ─────────────────────────────────────────────────────────────────────
+// ── Nav ──────────────────────────────────────────────────────────────────────
 
 function Nav({ scrolled }: { scrolled: boolean }) {
   const links = ['About', 'Expertise', 'Experience', 'Projects', 'Certifications', 'Contact']
@@ -137,9 +16,7 @@ function Nav({ scrolled }: { scrolled: boolean }) {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#hero" className="text-teal-700 font-bold text-lg tracking-tight">
-          RF
-        </a>
+        <a href="#hero" className="text-teal-700 font-bold text-lg tracking-tight">RF</a>
         <div className="hidden md:flex gap-6">
           {links.map((l) => (
             <a
@@ -154,7 +31,7 @@ function Nav({ scrolled }: { scrolled: boolean }) {
           ))}
         </div>
         <a
-          href="mailto:rbfonseca.consulting@gmail.com"
+          href={`mailto:${['rbfonseca', '.consulting@gmail.com'].join('')}`}
           className="hidden md:inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
         >
           Get in Touch
@@ -172,7 +49,6 @@ function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center bg-gradient-to-br from-teal-900 via-teal-800 to-gray-900 text-white overflow-hidden"
     >
-      {/* subtle grid overlay */}
       <div
         className="absolute inset-0 opacity-10"
         style={{
@@ -182,48 +58,30 @@ function Hero() {
       />
       <div className="relative max-w-6xl mx-auto px-6 py-32">
         <p className="text-teal-300 font-medium tracking-widest uppercase text-sm mb-4">
-          Technology Executive
+          {hero.title}
         </p>
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
-          Roberto<br />
-          <span className="text-teal-300">Fonseca</span>
+          {hero.name.split(' ')[0]}<br />
+          <span className="text-teal-300">{hero.name.split(' ')[1]}</span>
         </h1>
         <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-10 leading-relaxed">
-          20+ years delivering Oracle Energy &amp; Water CIS modernization programs across North
-          America. CTO, solution architect, and builder — bridging technical complexity with
-          business strategy.
+          {hero.tagline}
         </p>
         <div className="flex flex-wrap gap-4">
-          <a
-            href="#projects"
-            className="bg-teal-500 hover:bg-teal-400 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
-          >
+          <a href="#projects" className="bg-teal-500 hover:bg-teal-400 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
             View My Work
           </a>
-          <a
-            href="https://www.linkedin.com/in/rfonseca/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border border-white/30 hover:border-white text-white font-semibold px-6 py-3 rounded-lg transition-colors"
-          >
+          <a href={hero.linkedIn} target="_blank" rel="noopener noreferrer" className="border border-white/30 hover:border-white text-white font-semibold px-6 py-3 rounded-lg transition-colors">
             LinkedIn
           </a>
-          <a
-            href="mailto:rbfonseca.consulting@gmail.com"
-            className="border border-white/30 hover:border-white text-white font-semibold px-6 py-3 rounded-lg transition-colors"
-          >
+          <a href="#contact" className="border border-white/30 hover:border-white text-white font-semibold px-6 py-3 rounded-lg transition-colors">
             Contact Me
           </a>
         </div>
         <div className="mt-16 flex flex-wrap gap-8 text-center">
-          {[
-            ['20+', 'Years of Experience'],
-            ['$20M+', 'in Proposals Supported'],
-            ['$5M+', 'Projects Managed'],
-            ['USA & Canada', 'Delivery Footprint'],
-          ].map(([stat, label]) => (
+          {stats.map(({ value, label }) => (
             <div key={label}>
-              <div className="text-3xl font-bold text-teal-300">{stat}</div>
+              <div className="text-3xl font-bold text-teal-300">{value}</div>
               <div className="text-sm text-gray-400 mt-1">{label}</div>
             </div>
           ))}
@@ -233,7 +91,7 @@ function Hero() {
   )
 }
 
-// ── About ─────────────────────────────────────────────────────────────────────
+// ── About ────────────────────────────────────────────────────────────────────
 
 function About() {
   return (
@@ -241,32 +99,13 @@ function About() {
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
         <div>
           <p className="text-teal-600 font-semibold uppercase tracking-widest text-sm mb-3">About Me</p>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Where strategy meets execution
-          </h2>
-          <p className="text-gray-600 leading-relaxed mb-4">
-            I'm a technology executive with a career built on delivering multimillion-dollar utility
-            modernization programs. Specializing in Oracle Energy &amp; Water products — CC&amp;B,
-            C2M, CCS, and MDM — I've led global teams from pre-sales through go-live across the
-            United States and Canada.
-          </p>
-          <p className="text-gray-600 leading-relaxed mb-4">
-            Beyond consulting, I build software. From project estimation tools to Oracle schema
-            explorers, I enjoy solving real problems with code — and I bring that same builder's
-            mindset to every engagement I lead.
-          </p>
-          <p className="text-gray-600 leading-relaxed">
-            I'm widely recognized for fostering stability and high team retention, especially in
-            fast-moving environments where clarity and people-first leadership matter most.
-          </p>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">{about.heading}</h2>
+          {about.paragraphs.map((p, i) => (
+            <p key={i} className="text-gray-600 leading-relaxed mb-4">{p}</p>
+          ))}
         </div>
         <div className="grid grid-cols-2 gap-4">
-          {[
-            { icon: '🏗️', title: 'Solution Architecture', desc: 'Designing scalable CIS solutions for utilities across North America' },
-            { icon: '👥', title: 'Team Leadership', desc: 'Building and mentoring high-performing cross-functional teams' },
-            { icon: '📈', title: 'Business Development', desc: 'Growing engagements from single projects to multi-year portfolios' },
-            { icon: '💻', title: 'Software Builder', desc: 'Full-stack SaaS apps shipped from idea to production' },
-          ].map(({ icon, title, desc }) => (
+          {about.highlights.map(({ icon, title, desc }) => (
             <div key={title} className="bg-teal-50 rounded-xl p-5 border border-teal-100">
               <div className="text-2xl mb-3">{icon}</div>
               <h3 className="font-semibold text-gray-900 mb-1">{title}</h3>
@@ -279,7 +118,7 @@ function About() {
   )
 }
 
-// ── Expertise ─────────────────────────────────────────────────────────────────
+// ── Expertise ────────────────────────────────────────────────────────────────
 
 function Expertise() {
   return (
@@ -302,7 +141,7 @@ function Expertise() {
   )
 }
 
-// ── Experience ────────────────────────────────────────────────────────────────
+// ── Experience ───────────────────────────────────────────────────────────────
 
 function Experience() {
   return (
@@ -336,7 +175,7 @@ function Experience() {
   )
 }
 
-// ── Projects ──────────────────────────────────────────────────────────────────
+// ── Projects ─────────────────────────────────────────────────────────────────
 
 function Projects() {
   return (
@@ -349,10 +188,7 @@ function Projects() {
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((p) => (
-            <div
-              key={p.name}
-              className="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-teal-200 transition-all flex flex-col"
-            >
+            <div key={p.name} className="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md hover:border-teal-200 transition-all flex flex-col">
               <div className="p-6 flex-1">
                 <div className="flex items-start gap-3 mb-4">
                   <span className="text-3xl">{p.icon}</span>
@@ -364,20 +200,13 @@ function Projects() {
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">{p.description}</p>
                 <div className="flex flex-wrap gap-1.5">
                   {p.tech.map((t) => (
-                    <span key={t} className="bg-gray-100 text-gray-600 text-xs px-2.5 py-1 rounded-full font-medium">
-                      {t}
-                    </span>
+                    <span key={t} className="bg-gray-100 text-gray-600 text-xs px-2.5 py-1 rounded-full font-medium">{t}</span>
                   ))}
                 </div>
               </div>
               <div className="px-6 pb-6">
                 {p.url ? (
-                  <a
-                    href={p.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm font-semibold text-teal-600 hover:text-teal-700 transition-colors"
-                  >
+                  <a href={p.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-semibold text-teal-600 hover:text-teal-700 transition-colors">
                     View Live App
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -395,7 +224,7 @@ function Projects() {
   )
 }
 
-// ── Certifications ────────────────────────────────────────────────────────────
+// ── Certifications ───────────────────────────────────────────────────────────
 
 function Certifications() {
   return (
@@ -403,9 +232,7 @@ function Certifications() {
       <div className="max-w-6xl mx-auto px-6">
         <p className="text-teal-600 font-semibold uppercase tracking-widest text-sm mb-3">Education & Learning</p>
         <h2 className="text-4xl font-bold text-gray-900 mb-4">Certifications</h2>
-        <p className="text-gray-500 mb-10">
-          Bachelor's in Computer Science · University of Fortaleza, Brazil
-        </p>
+        <p className="text-gray-500 mb-10">{education}</p>
         <div className="grid md:grid-cols-2 gap-8">
           {Object.entries(certifications).map(([category, items]) => (
             <div key={category} className="bg-gray-50 rounded-xl p-6 border border-gray-100">
@@ -429,7 +256,7 @@ function Certifications() {
   )
 }
 
-// ── Contact ───────────────────────────────────────────────────────────────────
+// ── Contact ──────────────────────────────────────────────────────────────────
 
 type FormState = 'idle' | 'submitting' | 'success' | 'error'
 
@@ -442,7 +269,6 @@ function Contact() {
   const [errorMsg, setErrorMsg] = useState('')
   const turnstileRef = useRef<TurnstileInstance>(null)
 
-  // Cloudflare Turnstile test key (always passes). Replace with real site key via env var.
   const siteKey = import.meta.env.VITE_TURNSTILE_SITE_KEY ?? '1x00000000000000000000AA'
 
   async function handleSubmit(e: React.FormEvent) {
@@ -473,8 +299,6 @@ function Contact() {
     <section id="contact" className="py-24 bg-gradient-to-br from-teal-900 via-teal-800 to-gray-900 text-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 items-start">
-
-          {/* Left — copy + LinkedIn */}
           <div>
             <p className="text-teal-300 font-semibold uppercase tracking-widest text-sm mb-3">Get In Touch</p>
             <h2 className="text-4xl font-bold mb-4">Let's Connect</h2>
@@ -483,7 +307,7 @@ function Contact() {
               utility modernization program, or just want to connect — drop me a message.
             </p>
             <a
-              href="https://www.linkedin.com/in/rfonseca/"
+              href={hero.linkedIn}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white font-semibold px-6 py-3 rounded-lg transition-colors"
@@ -493,10 +317,9 @@ function Contact() {
               </svg>
               Connect on LinkedIn
             </a>
-            <p className="text-gray-500 text-sm mt-6">Rochester, NY · Available for consulting and full-time opportunities</p>
+            <p className="text-gray-500 text-sm mt-6">{hero.location} · {hero.availability}</p>
           </div>
 
-          {/* Right — contact form */}
           <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
             {formState === 'success' ? (
               <div className="text-center py-8">
@@ -508,56 +331,19 @@ function Contact() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-1">Name</label>
-                  <input
-                    type="text"
-                    required
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    placeholder="Your name"
-                    className={inputClass}
-                  />
+                  <input type="text" required value={name} onChange={(e) => setName(e.target.value)} placeholder="Your name" className={inputClass} />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-1">Email</label>
-                  <input
-                    type="email"
-                    required
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="your@email.com"
-                    className={inputClass}
-                  />
+                  <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} placeholder="your@email.com" className={inputClass} />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-1">Message</label>
-                  <textarea
-                    required
-                    rows={4}
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    placeholder="What would you like to discuss?"
-                    className={`${inputClass} resize-none`}
-                  />
+                  <textarea required rows={4} value={message} onChange={(e) => setMessage(e.target.value)} placeholder="What would you like to discuss?" className={`${inputClass} resize-none`} />
                 </div>
-
-                {/* Turnstile widget — invisible challenge, appears only if Cloudflare suspects a bot */}
-                <Turnstile
-                  ref={turnstileRef}
-                  siteKey={siteKey}
-                  onSuccess={setToken}
-                  onExpire={() => setToken(null)}
-                  options={{ theme: 'dark', size: 'flexible' }}
-                />
-
-                {formState === 'error' && (
-                  <p className="text-red-400 text-sm">{errorMsg}</p>
-                )}
-
-                <button
-                  type="submit"
-                  disabled={formState === 'submitting' || !token}
-                  className="w-full bg-teal-500 hover:bg-teal-400 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold px-6 py-3 rounded-lg transition-colors"
-                >
+                <Turnstile ref={turnstileRef} siteKey={siteKey} onSuccess={setToken} onExpire={() => setToken(null)} options={{ theme: 'dark', size: 'flexible' }} />
+                {formState === 'error' && <p className="text-red-400 text-sm">{errorMsg}</p>}
+                <button type="submit" disabled={formState === 'submitting' || !token} className="w-full bg-teal-500 hover:bg-teal-400 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold px-6 py-3 rounded-lg transition-colors">
                   {formState === 'submitting' ? 'Sending…' : 'Send Message'}
                 </button>
               </form>
@@ -569,7 +355,7 @@ function Contact() {
   )
 }
 
-// ── Footer ────────────────────────────────────────────────────────────────────
+// ── Footer ───────────────────────────────────────────────────────────────────
 
 function Footer() {
   return (
@@ -579,7 +365,7 @@ function Footer() {
   )
 }
 
-// ── App ───────────────────────────────────────────────────────────────────────
+// ── App ──────────────────────────────────────────────────────────────────────
 
 export default function App() {
   const [scrolled, setScrolled] = useState(false)
