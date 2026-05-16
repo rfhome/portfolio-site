@@ -122,6 +122,15 @@ export const projects: {
   icon: string
 }[] = [
   {
+    name: 'AgentStack',
+    tagline: 'Personal multi-agent AI fitness system',
+    description:
+      'Logs training sessions and runs three specialized AI agents in parallel — Pulse (Claude), Forge (GPT-4o), and Lens (Gemini) — covering performance analysis, strength prescription, and recovery assessment. A fourth agent, Nexus, synthesizes all three into a single prioritized recommendation. Integrates with Oura Ring and Fitbit/Google Fit for wearable-aware coaching.',
+    tech: ['Next.js', 'TypeScript', 'Claude', 'GPT-4o', 'Gemini', 'PostgreSQL', 'Prisma', 'Oura', 'Fitbit'],
+    url: 'https://agentstack.catalystedgeconnect.com',
+    icon: '🤖',
+  },
+  {
     name: 'Project Estimator',
     tagline: 'Multi-tenant SaaS for project scoping & tracking',
     description:
