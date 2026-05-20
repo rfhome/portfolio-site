@@ -158,13 +158,13 @@ export const projects: {
     icon: '🗄️',
   },
   {
-    name: 'GoalMate',
+    name: 'HabitBuild',
     tagline: 'Privacy-first habit & goal tracker',
     description:
       'Mobile app for building and tracking habits across iOS and Android. Supports flexible goal frequencies (daily, weekly, weekday), anchor times, calendar views, streaks, badges, leaderboards, and local notifications.',
     tech: ['Expo', 'React Native', 'Supabase', 'TypeScript'],
     url: null,
-    icon: '🎯',
+    icon: '✅',
   },
   {
     name: 'OST to PST Tool',
