@@ -68,9 +68,9 @@ export const experience: { role: string; bullets: string[] }[] = [
   {
     role: 'Senior Project Manager',
     bullets: [
-      'Leads direct client engagement across active accounts as primary point of contact throughout the project lifecycle.',
-      'Manages existing Managed Services Program supporting a team of 5 resources and ~$1M in annual recurring revenue.',
-      'Directs a large-scale Oracle C2M implementation with a cross-functional team of 15 resources and a ~$5M 2-year budget.',
+      'Lead direct client engagement across active accounts, serving as the primary point of contact throughout project lifecycle and ongoing support relationships.',
+      'Managed existing Managed Services Program with a dedicated supporting team of 5 resources.',
+      'Directed project management of a large-scale Oracle C2M implementation leading a cross-functional team across a multi-year engagement.',
     ],
   },
   {
