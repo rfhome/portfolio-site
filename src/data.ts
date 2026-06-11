@@ -30,9 +30,9 @@ export const stats: { value: string; label: string }[] = [
 export const about = {
   heading: 'Where strategy meets execution',
   paragraphs: [
-    "I'm a technology executive with a career built on delivering multimillion-dollar utility modernization programs. Specializing in Oracle Energy & Water products — CC&B, C2M, CCS, and MDM — I've led global teams from pre-sales through go-live across the United States and Canada.",
-    "Beyond consulting, I build software. From project estimation tools to Oracle schema explorers, I enjoy solving real problems with code — and I bring that same builder's mindset to every engagement I lead.",
-    "I'm widely recognized for fostering stability and high team retention, especially in fast-moving environments where clarity and people-first leadership matter most.",
+    "I'm a technology executive with proven leadership in Oracle Energy and Water implementations, specializing in Customer Information Systems (CIS), with a track record of delivering multimillion-dollar utility modernization programs across North America.",
+    "I actively apply emerging AI and agentic development tools to build production-ready applications — staying technically hands-on as the technology landscape evolves. From multi-agent AI systems to project estimation SaaS, I translate ideas into working software through rapid prototyping and iterative refinement.",
+    "A collaborative leader and mentor proficient in pre-sales strategy, client delivery, and long-term partnerships — fostering stability in fast-moving environments and high team retention.",
   ],
   highlights: [
     { icon: '🏗️', title: 'Solution Architecture', desc: 'Designing scalable CIS solutions for utilities across North America' },
@@ -53,11 +53,14 @@ export const expertise: string[] = [
   'SDLC Oversight',
   'Client Advisory & Executive Stakeholder Management',
   'RFP Response & Pricing Strategy',
+  'Resourcing & Budgeting',
   'Business Development',
   'Partner Engagement',
   'SOW & Contract Alignment',
   'Process Improvement',
   'Cross-team Collaboration',
+  'AI-Assisted Development',
+  'Agentic AI Workflows',
 ]
 
 // ── Experience ────────────────────────────────────────────────────────────────
@@ -68,44 +71,37 @@ export const experience: { role: string; bullets: string[] }[] = [
   {
     role: 'Senior Project Manager',
     bullets: [
-      'Lead direct client engagement across active accounts, serving as the primary point of contact throughout project lifecycle and ongoing support relationships.',
-      'Managed existing Managed Services Program with a dedicated supporting team of 5 resources.',
-      'Directed project management of a large-scale Oracle C2M implementation leading a cross-functional team across a multi-year engagement.',
+      'Leads direct client engagement across active accounts, serving as the primary point of contact throughout project lifecycle and ongoing support relationships.',
+      'Manages an existing Managed Services Program with a dedicated team of five.',
+      'Directs a large-scale Oracle C2M implementation, leading a cross-functional team across a multi-year engagement.',
     ],
   },
   {
     role: 'Chief Technology Officer / Delivery Manager',
     bullets: [
-      'Developed pricing and staffing models supporting $20M+ in proposals and delivery plans.',
-      'Grew a single managed services engagement into a multi-year, multi-project portfolio — increasing revenue by $1.5M+ YOY.',
-      'Led Agile delivery teams of up to 20 individuals in a hybrid onshore/offshore/nearshore model.',
-      'Directed migration of internal infrastructure to cloud platforms (AWS, Oracle) to align with client cybersecurity standards.',
-      'Engaged directly at Steering Committee and Board level throughout the project lifecycle.',
+      'Developed pricing and staffing models supporting $20M+ in proposals and delivery plans for various customers and initiatives.',
+      'Grew a single managed-services engagement into a multi-year, multi-project program, increasing revenue by $1.5M+ YoY.',
+      'Led delivery programs, owning technical strategy and cross-functional team coordination.',
+      'Migrated internal infrastructure to cloud platforms, aligning internal cybersecurity standards with client security requirements.',
+      'Led Agile delivery teams of up to 20 individuals working in hybrid onshore/offshore/nearshore model.',
+      'Engaged directly with clients throughout the project lifecycle, including Steering Committee and Board meetings.',
+      'Managed internal infrastructure deployed on cloud platforms (AWS, Oracle) used by consulting services teams.',
     ],
   },
   {
-    role: 'Director, Consulting Services / Solution Architect',
+    role: 'Director, Solution Center / Solution Architect',
     bullets: [
-      'Managed delivery for major Oracle Energy & Water implementations across USA and Canada.',
-      'Directed functional and technical design teams; ensured project profitability through optimized resource allocation.',
-      'Oversaw development and QA of custom solutions for utilities clients.',
+      'Key decision-maker for both functional and technical teams across implementation projects.',
+      'Managed delivery of major Oracle Energy and Water CIS implementations across USA and Canada, allocating consulting resources across projects.',
+      'Directly managed projects\' functional and technical design teams ensuring project profitability through optimized resource allocation.',
+      'Oversaw development and QA of custom CIS solutions for clients in the utilities industry.',
     ],
   },
   {
     role: 'Application Support Team Leader',
     bullets: [
-      'Supported Oracle/SPL CIS solutions across multiple utility clients.',
-      'Built long-term client relationships through direct engagement and responsive support.',
-      'Led development team designing and implementing business processes for various clients.',
-    ],
-  },
-  {
-    role: 'Senior Consultant',
-    bullets: [
-      'Supported integrations for SPL CIS subsystems at utility company.',
-      'Delivered system enhancements for regulatory compliance: billing, EDI, and partner integrations.',
-      'Reengineered legacy systems into modern languages/platforms.',
-      'Led technical assessments and Y2K compliance implementations at a major financial institution.',
+      'Built direct, long-term business relationships across multiple clients.',
+      'Led a development team supporting, designing, and implementing Oracle/SPL CIS business processes across multiple clients.',
     ],
   },
 ]
