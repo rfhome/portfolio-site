@@ -8,7 +8,7 @@
 
 export const hero = {
   name: 'Roberto Fonseca',
-  title: 'Technology Executive',
+  title: 'Roberto Fonseca | Oracle CIS & Technology Executive',
   tagline:
     'Vast experience delivering Oracle Energy & Water modernization programs across North America. CTO, solution architect, and builder — bridging technical complexity with business strategy.',
   linkedIn: 'https://www.linkedin.com/in/rfonseca/',
@@ -19,7 +19,7 @@ export const hero = {
 // ── Stats (shown in hero) ─────────────────────────────────────────────────────
 
 export const stats: { value: string; label: string }[] = [
-  { value: '20+', label: 'Years of Experience' },
+  { value: '25+', label: 'Years of Experience' },
   { value: '$20M+', label: 'in Proposals Supported' },
   { value: '$5M+', label: 'Projects Managed' },
   { value: 'USA & Canada', label: 'Delivery Footprint' },
