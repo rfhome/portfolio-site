@@ -44,3 +44,5 @@ Disallow: /
 
 User-agent: PetalBot
 Disallow: /
+
+Sitemap: https://www.catalystedgeconnect.com/sitemap.xml

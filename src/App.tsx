@@ -10,6 +10,7 @@ import {
 function Nav({ scrolled }: { scrolled: boolean }) {
   const links = ['About', 'Expertise', 'Experience', 'Projects', 'Certifications', 'Contact']
   return (
+    <header>
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? 'bg-white/95 backdrop-blur shadow-sm' : 'bg-transparent'
@@ -38,6 +39,7 @@ function Nav({ scrolled }: { scrolled: boolean }) {
         </a>
       </div>
     </nav>
+    </header>
   )
 }
 
