@@ -126,10 +126,10 @@ function Hero() {
                 Adjust these two values if eyes don't land where you want them.
               */}
               <img
-                src="/images/headshot.jpg"
+                src="/images/headshot.png"
                 alt="Roberto Fonseca, Technology Executive, smiling in a professional headshot"
                 className="relative w-full h-full rounded-3xl object-cover shadow-2xl"
-                style={{ objectPosition: '58% 18%', zIndex: 1 }}
+                style={{ objectPosition: '50% 15%', zIndex: 1 }}
               />
             </div>
           </div>
