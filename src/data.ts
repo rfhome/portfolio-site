@@ -10,7 +10,7 @@ export const hero = {
   name: 'Roberto Fonseca',
   title: 'Roberto Fonseca | Oracle CIS & Technology Executive',
   tagline:
-    'Vast experience delivering Oracle Energy & Water modernization programs across North America. CTO, solution architect, and builder — bridging technical complexity with business strategy.',
+    '25 years in Oracle CIS. I operate where most organizations need a full team — running strategy, architecture, delivery, and product in parallel. Currently available for consulting and full-time opportunities.',
   linkedIn: 'https://www.linkedin.com/in/rfonseca/',
   location: 'Rochester, NY',
   availability: 'Available for consulting and full-time opportunities',
@@ -28,17 +28,16 @@ export const stats: { value: string; label: string }[] = [
 // ── About ─────────────────────────────────────────────────────────────────────
 
 export const about = {
-  heading: 'Where strategy meets execution',
+  heading: 'One person. Full-stack delivery.',
   paragraphs: [
-    "I'm a technology executive with proven leadership in Oracle Energy and Water implementations, specializing in Customer Information Systems (CIS), with a track record of delivering multimillion-dollar utility modernization programs across North America.",
-    "I actively apply emerging AI and agentic development tools to build production-ready applications — staying technically hands-on as the technology landscape evolves. From multi-agent AI systems to project estimation SaaS, I translate ideas into working software through rapid prototyping and iterative refinement.",
-    "A collaborative leader and mentor proficient in pre-sales strategy, client delivery, and long-term partnerships — fostering stability in fast-moving environments and high team retention.",
+    "I'm a technology executive with 25+ years leading Oracle Energy and Water implementations across North America — from single-project engagements to multi-year, multi-million-dollar programs. I've held roles across the full delivery spectrum: application support, solution architecture, Director, CTO, and Senior Project Manager. That range isn't accidental. I've always been drawn to the hardest part of the problem, whatever it is.",
+    "Outside of client delivery, I build. I apply agentic AI workflows and modern dev tools to ship full-stack production applications independently — from architecture through deployment. Six apps in production, built solo. The work in my portfolio isn't side-project quality; it's the same standard I apply to client work.",
   ],
   highlights: [
-    { icon: '🏗️', title: 'Solution Architecture', desc: 'Designing scalable CIS solutions for utilities across North America' },
-    { icon: '👥', title: 'Team Leadership', desc: 'Building and mentoring high-performing cross-functional teams' },
-    { icon: '📈', title: 'Business Development', desc: 'Growing engagements from single projects to multi-year portfolios' },
-    { icon: '💻', title: 'Software Builder', desc: 'Full-stack SaaS apps shipped from idea to production' },
+    { icon: '🏗️', title: 'Solution Architecture', desc: 'End-to-end CIS design for utilities — from requirements through go-live' },
+    { icon: '👥', title: 'Team Leadership', desc: 'Onshore, nearshore, and offshore teams of up to 20 across multi-year engagements' },
+    { icon: '📈', title: 'Business Development', desc: 'From first proposal to multi-year retained program — $20M+ in supported revenue' },
+    { icon: '💻', title: 'Software Builder', desc: 'Six production apps shipped solo — full stack, idea to deployment' },
   ],
 }
 
@@ -61,15 +60,17 @@ export const expertise: string[] = [
   'Cross-team Collaboration',
   'AI-Assisted Development',
   'Agentic AI Workflows',
+  'High-Impact IC',
 ]
 
 // ── Experience ────────────────────────────────────────────────────────────────
 // To add a new role: copy one block, paste it at the top, fill in the details.
 // To remove a role: delete the entire { ... } block for that entry.
 
-export const experience: { role: string; bullets: string[] }[] = [
+export const experience: { role: string; context: string; bullets: string[] }[] = [
   {
     role: 'Senior Project Manager',
+    context: 'Oracle CC&B / C2M delivery leadership — direct client ownership across active accounts and managed services.',
     bullets: [
       'Leads direct client engagement across active accounts, serving as the primary point of contact throughout project lifecycle and ongoing support relationships.',
       'Manages an existing Managed Services Program with a dedicated team of five.',
@@ -78,6 +79,7 @@ export const experience: { role: string; bullets: string[] }[] = [
   },
   {
     role: 'Chief Technology Officer / Delivery Manager',
+    context: 'Built the consulting practice infrastructure — pricing models, delivery programs, cloud migrations, and cross-functional team leadership across onshore/offshore models.',
     bullets: [
       'Developed pricing and staffing models supporting $20M+ in proposals and delivery plans for various customers and initiatives.',
       'Grew a single managed-services engagement into a multi-year, multi-project program, increasing revenue by $1.5M+ YoY.',
@@ -90,6 +92,7 @@ export const experience: { role: string; bullets: string[] }[] = [
   },
   {
     role: 'Director, Solution Center / Solution Architect',
+    context: 'Led Oracle Energy and Water CIS implementations across USA and Canada — functional and technical ownership from design through QA.',
     bullets: [
       'Key decision-maker for both functional and technical teams across implementation projects.',
       'Managed delivery of major Oracle Energy and Water CIS implementations across USA and Canada, allocating consulting resources across projects.',
@@ -99,6 +102,7 @@ export const experience: { role: string; bullets: string[] }[] = [
   },
   {
     role: 'Application Support Team Leader',
+    context: 'Foundation role — multi-client Oracle/SPL CIS support, development, and long-term relationship building.',
     bullets: [
       'Built direct, long-term business relationships across multiple clients.',
       'Led a development team supporting, designing, and implementing Oracle/SPL CIS business processes across multiple clients.',

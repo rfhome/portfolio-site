@@ -207,7 +207,8 @@ function Experience() {
               <div key={i} className="md:pl-10 relative">
                 <div className="hidden md:flex absolute left-0 top-1 w-4 h-4 rounded-full bg-teal-600 border-2 border-white shadow" />
                 <div className="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:border-teal-200 transition-colors">
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">{job.role}</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">{job.role}</h3>
+                  <p className="text-xs text-gray-400 mb-3 leading-relaxed">{job.context}</p>
                   <ul className="space-y-1.5">
                     {job.bullets.map((b, j) => (
                       <li key={j} className="flex gap-2 text-sm text-gray-600">
@@ -233,9 +234,9 @@ function Projects() {
     <section id="projects" className="py-24 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6">
         <p className="text-teal-600 font-semibold uppercase tracking-widest text-sm mb-3">Portfolio</p>
-        <h2 className="text-4xl font-bold text-gray-900 mb-4">Apps I've Built</h2>
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">Apps I've Built — Solo</h2>
         <p className="text-gray-500 mb-12 max-w-xl">
-          Full-stack applications built from scratch — from idea and architecture through deployment.
+          Six production applications — built alone, from idea through deployment. Each one solves a real problem I had.
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((p) => (
@@ -354,8 +355,8 @@ function Contact() {
             <p className="text-teal-300 font-semibold uppercase tracking-widest text-sm mb-3">Get In Touch</p>
             <h2 className="text-4xl font-bold mb-4">Let's Connect</h2>
             <p className="text-gray-300 mb-8 leading-relaxed">
-              Whether you're looking for an experienced CIS delivery leader, want to discuss a
-              utility modernization program, or just want to connect — drop me a message.
+              Whether you need an experienced Oracle CIS delivery leader, want to talk through a
+              utility modernization program, or are curious about how I build and what I'm working on — I'm easy to reach.
             </p>
             <a
               href={hero.linkedIn}
