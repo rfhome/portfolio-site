@@ -49,6 +49,7 @@ function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center bg-gradient-to-br from-teal-900 via-teal-800 to-gray-900 text-white overflow-hidden"
     >
+      {/* dot grid overlay */}
       <div
         className="absolute inset-0 opacity-10"
         style={{
@@ -56,35 +57,83 @@ function Hero() {
           backgroundSize: '40px 40px',
         }}
       />
-      <div className="relative max-w-6xl mx-auto px-6 py-32">
-        <p className="text-teal-300 font-medium tracking-widest uppercase text-sm mb-4">
-          {hero.title}
-        </p>
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
-          {hero.name.split(' ')[0]}<br />
-          <span className="text-teal-300">{hero.name.split(' ')[1]}</span>
-        </h1>
-        <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-10 leading-relaxed">
-          {hero.tagline}
-        </p>
-        <div className="flex flex-wrap gap-4">
-          <a href="#projects" className="bg-teal-500 hover:bg-teal-400 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
-            View My Work
-          </a>
-          <a href={hero.linkedIn} target="_blank" rel="noopener noreferrer" className="border border-white/30 hover:border-white text-white font-semibold px-6 py-3 rounded-lg transition-colors">
-            LinkedIn
-          </a>
-          <a href="#contact" className="border border-white/30 hover:border-white text-white font-semibold px-6 py-3 rounded-lg transition-colors">
-            Contact Me
-          </a>
-        </div>
-        <div className="mt-16 flex flex-wrap gap-8 text-center">
-          {stats.map(({ value, label }) => (
-            <div key={label}>
-              <div className="text-3xl font-bold text-teal-300">{value}</div>
-              <div className="text-sm text-gray-400 mt-1">{label}</div>
+
+      <div className="relative max-w-6xl mx-auto px-6 py-32 w-full">
+        <div className="grid md:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-20 items-center">
+
+          {/* ── LEFT: text ── */}
+          <div>
+            <p className="text-teal-300 font-medium tracking-widest uppercase text-sm mb-4">
+              {hero.title}
+            </p>
+            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+              {hero.name.split(' ')[0]}<br />
+              <span className="text-teal-300">{hero.name.split(' ')[1]}</span>
+            </h1>
+            <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-10 leading-relaxed">
+              {hero.tagline}
+            </p>
+            <div className="flex flex-wrap gap-4 mb-12">
+              <a
+                href="#projects"
+                className="bg-teal-500 hover:bg-teal-400 text-white font-semibold px-6 py-3 rounded-lg motion-safe:transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-300"
+              >
+                View My Work
+              </a>
+              <a
+                href={hero.linkedIn}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-white/30 hover:border-white text-white font-semibold px-6 py-3 rounded-lg motion-safe:transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-300"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="#contact"
+                className="border border-white/30 hover:border-white text-white font-semibold px-6 py-3 rounded-lg motion-safe:transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-300"
+              >
+                Contact Me
+              </a>
             </div>
-          ))}
+            <div className="flex flex-wrap gap-8 text-center border-t border-white/10 pt-8">
+              {stats.map(({ value, label }) => (
+                <div key={label}>
+                  <div className="text-3xl font-bold text-teal-300">{value}</div>
+                  <div className="text-sm text-gray-400 mt-1">{label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ── RIGHT: headshot ── */}
+          {/* On mobile this column stacks below the text (order-last) */}
+          <div className="order-last md:order-none flex justify-center md:justify-end">
+            <div
+              className="relative w-full"
+              style={{ maxWidth: '380px', aspectRatio: '4 / 5' }}
+            >
+              {/* Teal accent panel offset behind the photo.
+                  Negative insets not expressible in Tailwind, so inline style. */}
+              <div
+                aria-hidden="true"
+                className="absolute rounded-3xl bg-teal-500/20 border border-teal-400/30"
+                style={{ inset: '18px -18px -18px 18px', zIndex: 0 }}
+              />
+              {/*
+                Photo tuning:
+                  object-position X: 58%  — face is slightly right of frame center
+                  object-position Y: 18%  — pulls face toward upper portion of frame
+                Adjust these two values if eyes don't land where you want them.
+              */}
+              <img
+                src="/images/headshot.jpg"
+                alt="Roberto Fonseca, Technology Executive, smiling in a professional headshot"
+                className="relative w-full h-full rounded-3xl object-cover shadow-2xl"
+                style={{ objectPosition: '58% 18%', zIndex: 1 }}
+              />
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
