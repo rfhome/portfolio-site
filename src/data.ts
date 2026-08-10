@@ -1,200 +1,167 @@
-// ─────────────────────────────────────────────────────────────────────────────
-// PORTFOLIO CONTENT
-// Edit this file to update your portfolio. After saving, Vercel auto-deploys
-// in ~30 seconds. No other files need to be touched.
-// ─────────────────────────────────────────────────────────────────────────────
-
-// ── Hero ──────────────────────────────────────────────────────────────────────
-
 export const hero = {
   name: 'Roberto Fonseca',
-  title: 'Roberto Fonseca | Oracle CIS & Technology Executive',
+  eyebrow: 'Utility transformation · Applied AI · Product systems',
   tagline:
-    '25 years in Oracle CIS. I operate where most organizations need a full team — running strategy, architecture, delivery, and product in parallel. Currently available for consulting and full-time opportunities.',
+    'I lead complex utility programs and build production software. My experience is grounded in CIS and Oracle Energy and Water, then extended through applied AI, product engineering, and practical systems that solve real operating problems.',
   linkedIn: 'https://www.linkedin.com/in/rfonseca/',
+  consulting: 'https://rbfonseca.com',
   location: 'Rochester, NY',
   availability: 'Available for consulting and full-time opportunities',
 }
 
-// ── Stats (shown in hero) ─────────────────────────────────────────────────────
-
 export const stats: { value: string; label: string }[] = [
-  { value: '25+', label: 'Years of Experience' },
-  { value: '$20M+', label: 'in Proposals Supported' },
-  { value: '$5M+', label: 'Projects Managed' },
-  { value: 'USA & Canada', label: 'Delivery Footprint' },
+  { value: '25+', label: 'Years in utility delivery' },
+  { value: '$20M+', label: 'Proposals supported' },
+  { value: '$5M+', label: 'Programs managed' },
+  { value: 'USA + Canada', label: 'Delivery footprint' },
 ]
 
-// ── About ─────────────────────────────────────────────────────────────────────
-
 export const about = {
-  heading: 'One person. Full-stack delivery.',
+  heading: 'Operator and builder.',
   paragraphs: [
-    "I'm a technology executive with 25+ years leading Oracle Energy and Water implementations across North America — from single-project engagements to multi-year, multi-million-dollar programs. I've held roles across the full delivery spectrum: application support, solution architecture, Director, CTO, and Senior Project Manager. That range isn't accidental. I've always been drawn to the hardest part of the problem, whatever it is.",
-    "Outside of client delivery, I build. I apply agentic AI workflows and modern dev tools to ship full-stack production applications independently — from architecture through deployment. Six apps in production, built solo. The work in my portfolio isn't side-project quality; it's the same standard I apply to client work.",
+    "I've spent my career helping utilities and consulting teams deliver consequential technology programs. That work has taken me across application support, solution architecture, consulting leadership, technology strategy, implementation audits, assessments, program delivery, and stabilization.",
+    "I also build. I use modern engineering tools and agentic AI workflows to turn recurring problems into production systems, from business operations and investment research to utility delivery accelerators. This portfolio is a working record of that practice, not a fixed inventory.",
   ],
   highlights: [
-    { icon: '🏗️', title: 'Solution Architecture', desc: 'End-to-end CIS design for utilities — from requirements through go-live' },
-    { icon: '👥', title: 'Team Leadership', desc: 'Onshore, nearshore, and offshore teams of up to 20 across multi-year engagements' },
-    { icon: '📈', title: 'Business Development', desc: 'From first proposal to multi-year retained program — $20M+ in supported revenue' },
-    { icon: '💻', title: 'Software Builder', desc: 'Six production apps shipped solo — full stack, idea to deployment' },
+    { index: '01', title: 'Utility transformation', desc: 'Complex implementations, audits, assessments, and modernization programs.' },
+    { index: '02', title: 'Delivery leadership', desc: 'Strategy, architecture, governance, execution, and stabilization.' },
+    { index: '03', title: 'Product systems', desc: 'A growing portfolio of production software built around real needs.' },
+    { index: '04', title: 'Applied AI', desc: 'Agent workflows paired with deterministic controls and human judgment.' },
   ],
 }
 
-// ── Expertise ─────────────────────────────────────────────────────────────────
-
 export const expertise: string[] = [
-  'Utility CIS Transformation',
+  'Utility Transformation',
+  'CIS Implementation Audits & Assessments',
   'Oracle CC&B / C2M / CCS / MDM',
-  'Technical Architecture',
-  'Project & Team Leadership',
-  'Cloud Migrations',
-  'SDLC Oversight',
-  'Client Advisory & Executive Stakeholder Management',
-  'RFP Response & Pricing Strategy',
-  'Resourcing & Budgeting',
-  'Business Development',
-  'Partner Engagement',
-  'SOW & Contract Alignment',
-  'Process Improvement',
-  'Cross-team Collaboration',
-  'AI-Assisted Development',
-  'Agentic AI Workflows',
-  'High-Impact IC',
+  'Program Delivery & Stabilization',
+  'Solution & Technical Architecture',
+  'Data Migration & Integrations',
+  'Client Advisory & Executive Governance',
+  'Commercial Planning & Estimation',
+  'Team Leadership',
+  'Cloud & Security Alignment',
+  'Applied AI Systems',
+  'Product Engineering',
 ]
-
-// ── Experience ────────────────────────────────────────────────────────────────
-// To add a new role: copy one block, paste it at the top, fill in the details.
-// To remove a role: delete the entire { ... } block for that entry.
 
 export const experience: { role: string; context: string; bullets: string[] }[] = [
   {
     role: 'Senior Project Manager',
-    context: 'Oracle CC&B / C2M delivery leadership — direct client ownership across active accounts and managed services.',
+    context: 'Utility technology delivery leadership with direct client ownership across implementations and managed services.',
     bullets: [
-      'Leads direct client engagement across active accounts, serving as the primary point of contact throughout project lifecycle and ongoing support relationships.',
-      'Manages an existing Managed Services Program with a dedicated team of five.',
-      'Directs a large-scale Oracle C2M implementation, leading a cross-functional team across a multi-year engagement.',
+      'Led direct client engagement across active accounts and ongoing support relationships.',
+      'Managed a dedicated services team and a large-scale Oracle C2M implementation.',
+      'Coordinated cross-functional delivery across multi-year programs.',
     ],
   },
   {
     role: 'Chief Technology Officer / Delivery Manager',
-    context: 'Built the consulting practice infrastructure — pricing models, delivery programs, cloud migrations, and cross-functional team leadership across onshore/offshore models.',
+    context: 'Built consulting operations spanning commercial planning, delivery programs, cloud platforms, and distributed teams.',
     bullets: [
-      'Developed pricing and staffing models supporting $20M+ in proposals and delivery plans for various customers and initiatives.',
-      'Grew a single managed-services engagement into a multi-year, multi-project program, increasing revenue by $1.5M+ YoY.',
-      'Led delivery programs, owning technical strategy and cross-functional team coordination.',
-      'Migrated internal infrastructure to cloud platforms, aligning internal cybersecurity standards with client security requirements.',
-      'Led Agile delivery teams of up to 20 individuals working in hybrid onshore/offshore/nearshore model.',
-      'Engaged directly with clients throughout the project lifecycle, including Steering Committee and Board meetings.',
-      'Managed internal infrastructure deployed on cloud platforms (AWS, Oracle) used by consulting services teams.',
+      'Developed pricing and staffing models supporting more than $20M in proposals and delivery plans.',
+      'Expanded a managed-services engagement into a multi-year, multi-project program with significant year-over-year growth.',
+      'Led technical strategy, client governance, cloud migration, and teams of up to 20 across onshore, nearshore, and offshore models.',
     ],
   },
   {
-    role: 'Director, Solution Center / Solution Architect',
-    context: 'Led Oracle Energy and Water CIS implementations across USA and Canada — functional and technical ownership from design through QA.',
+    role: 'Consulting Services Director / Solution Architect',
+    context: 'Functional and technical leadership for Oracle Energy and Water implementations across the United States and Canada.',
     bullets: [
-      'Key decision-maker for both functional and technical teams across implementation projects.',
-      'Managed delivery of major Oracle Energy and Water CIS implementations across USA and Canada, allocating consulting resources across projects.',
-      'Directly managed projects\' functional and technical design teams ensuring project profitability through optimized resource allocation.',
-      'Oversaw development and QA of custom CIS solutions for clients in the utilities industry.',
+      'Directed solution decisions across functional and technical workstreams.',
+      'Allocated consulting resources while balancing delivery quality and program economics.',
+      'Oversaw solution design, development, and quality assurance for utility clients.',
     ],
   },
   {
     role: 'Application Support Team Leader',
-    context: 'Foundation role — multi-client Oracle/SPL CIS support, development, and long-term relationship building.',
+    context: 'Multi-client Oracle and SPL CIS support, development, and relationship leadership.',
     bullets: [
-      'Built direct, long-term business relationships across multiple clients.',
-      'Led a development team supporting, designing, and implementing Oracle/SPL CIS business processes across multiple clients.',
+      'Led a development team supporting and implementing critical utility business processes.',
+      'Built direct, long-term relationships across multiple client organizations.',
     ],
   },
 ]
-
-// ── Projects ──────────────────────────────────────────────────────────────────
-// url: set to null if the app has no public web URL (desktop/mobile apps).
 
 export const projects: {
   name: string
   tagline: string
   description: string
   tech: string[]
-  url: string | null
-  icon: string
+  url: string
 }[] = [
   {
-    name: 'AgentStack',
-    tagline: 'Personal multi-agent AI fitness system',
+    name: 'Helm',
+    tagline: 'An operating system for an AI-ready consulting business',
     description:
-      'Logs training sessions and runs three specialized AI agents in parallel — Pulse (Claude), Forge (GPT-4o), and Lens (Gemini) — covering performance analysis, strength prescription, and recovery assessment. A fourth agent, Nexus, synthesizes all three into a single prioritized recommendation. Integrates with Oura Ring and Fitbit/Google Fit for wearable-aware coaching.',
-    tech: ['Next.js', 'TypeScript', 'Claude', 'GPT-4o', 'Gemini', 'PostgreSQL', 'Prisma', 'Oura', 'Fitbit'],
+      'A production platform for running an LLC across clients, contracts, time, invoicing, compliance, and documents. Its workflows are designed for auditability today and agent-assisted operations over time.',
+    tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'AI workflows'],
+    url: 'https://helm.catalystedgeconnect.com',
+  },
+  {
+    name: 'AgentStack Portfolio',
+    tagline: 'Multi-agent investment research with explicit controls',
+    description:
+      'A research and trading platform that coordinates specialist agents for analysis, risk, and synthesis. It combines falsifiable theses and deterministic risk checks with backtesting and broker integration.',
+    tech: ['Next.js', 'TypeScript', 'Python', 'PostgreSQL', 'Multi-agent AI'],
+    url: 'https://portfolio.catalystedgeconnect.com',
+  },
+  {
+    name: 'AgentStack Fitness',
+    tagline: 'Multi-model coaching informed by training and wearable data',
+    description:
+      'A personal coaching system that brings together specialist AI perspectives on performance, strength, and recovery, then synthesizes them into a focused recommendation.',
+    tech: ['Next.js', 'TypeScript', 'Claude', 'OpenAI', 'Gemini', 'Oura'],
     url: 'https://agentstack.catalystedgeconnect.com',
-    icon: '🤖',
   },
   {
     name: 'Project Estimator',
-    tagline: 'Multi-tenant SaaS for project scoping & tracking',
+    tagline: 'Delivery planning and commercial estimation accelerator',
     description:
-      'Full-stack SaaS for generating professional project estimates. Features a Gantt builder, resource planning grid, travel estimates, budget dashboard with burn-rate analysis, version snapshots with diff viewer, Excel export, and CSV import for actuals.',
-    tech: ['React', 'TypeScript', 'FastAPI', 'PostgreSQL', 'AG Grid', 'Tailwind'],
+      'A multi-tenant system for project scoping, resource planning, travel estimates, budgets, version comparison, actuals, and professional workbook exports.',
+    tech: ['React', 'TypeScript', 'FastAPI', 'PostgreSQL', 'AG Grid'],
     url: 'https://estimator.catalystedgeconnect.com',
-    icon: '📊',
   },
   {
-    name: 'Config Workbook Tool',
-    tagline: 'Lean configuration & Excel export tooling',
+    name: 'Config Workbook',
+    tagline: 'Utility configuration and workbook accelerator',
     description:
-      'Tool for managing Oracle CIS project configurations without portal sprawl. Centralizes client metadata, encrypted data source connections, and stored queries — with direct Excel workbook export and saved export history.',
-    tech: ['React', 'TypeScript', 'FastAPI', 'PostgreSQL'],
+      'A focused tool for organizing CIS project configuration, reusable queries, client metadata, secure data connections, workbook exports, and export history.',
+    tech: ['React', 'TypeScript', 'FastAPI', 'PostgreSQL', 'Excel'],
     url: 'https://config.catalystedgeconnect.com',
-    icon: '⚙️',
   },
   {
     name: 'Oracle ERD Builder',
-    tagline: 'Visual schema explorer for Oracle databases',
+    tagline: 'Interactive schema exploration for Oracle databases',
     description:
-      'FastAPI + React app for connecting to Oracle databases, pulling schema metadata, and rendering interactive ERD-style relationship graphs. Supports recursive graph expansion, inferred relationship review, named sessions, and export to SVG, PNG, and PDF.',
-    tech: ['React', 'FastAPI', 'React Flow', 'Oracle DB', 'Docker'],
+      'A visual system for retrieving database metadata and exploring relationships through expandable graphs, inferred-link review, saved sessions, and publication-ready exports.',
+    tech: ['React', 'FastAPI', 'React Flow', 'Oracle Database', 'Docker'],
     url: 'https://erd.catalystedgeconnect.com',
-    icon: '🗄️',
   },
   {
-    name: 'HabitBuild',
-    tagline: 'Privacy-first habit & goal tracker',
+    name: 'Split the Nest',
+    tagline: 'Household expenses without the spreadsheet friction',
     description:
-      'Mobile app for building and tracking habits across iOS and Android. Supports flexible goal frequencies (daily, weekly, weekday), anchor times, calendar views, streaks, badges, leaderboards, and local notifications.',
-    tech: ['Expo', 'React Native', 'Supabase', 'TypeScript'],
-    url: null,
-    icon: '✅',
-  },
-  {
-    name: 'OST to PST Tool',
-    tagline: 'Desktop tool for Outlook archive conversion',
-    description:
-      'Electron desktop application for converting Microsoft Outlook OST archives to portable mbox exports. Ships with a GUI (file pickers, progress tracking) and a CLI wrapper for automated use. Powered by libpst for faithful folder and attachment preservation.',
-    tech: ['Electron', 'TypeScript', 'libpst', 'Node.js'],
-    url: null,
-    icon: '📧',
+      'A mobile-first platform with isolated households, flexible expense splits, balances, settlement history, exports, and AI-written monthly recaps. Built as a PWA for everyday use.',
+    tech: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'Anthropic', 'PWA'],
+    url: 'https://split.catalystedgeconnect.com',
   },
 ]
 
-// ── Certifications ────────────────────────────────────────────────────────────
-
 export const certifications: Record<string, string[]> = {
   'Project Management & AI': [
-    'Change Management for Generative AI – Vanderbilt University',
-    'Talking to AI: Prompt Engineering for Project Managers – PMI',
-    'Fundamentals of Agentic AI – LinkedIn Learning',
-    'Building AI Agents using Docker, n8n, OpenAI Platform',
+    'Change Management for Generative AI, Vanderbilt University',
+    'Talking to AI: Prompt Engineering for Project Managers, PMI',
+    'Fundamentals of Agentic AI, LinkedIn Learning',
+    'Building AI Agents using Docker, n8n, and the OpenAI Platform',
     'Google Data Analytics Professional Certificate',
-    'Learning ITIL – LinkedIn Learning',
+    'Learning ITIL, LinkedIn Learning',
   ],
   'Business & Strategy': [
-    'Financial Markets – Yale University',
-    'Fundamentals of Quantitative Modeling – University of Pennsylvania',
-    'Introduction to Trading, Machine Learning and GCP',
+    'Financial Markets, Yale University',
+    'Fundamentals of Quantitative Modeling, University of Pennsylvania',
+    'Introduction to Trading, Machine Learning, and GCP',
   ],
 }
 
-// ── Education ─────────────────────────────────────────────────────────────────
-
-export const education = "Bachelor's degree in Computer Science · University of Fortaleza, Brazil"
+export const education = "Bachelor's degree in Computer Science, University of Fortaleza, Brazil"

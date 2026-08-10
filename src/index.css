@@ -2,10 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color: #172226;
+  background: #f7f8f6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
+  min-width: 320px;
   font-family: 'Inter', sans-serif;
+  background: #f7f8f6;
+}
+
+::selection {
+  color: #ffffff;
+  background: #0e766e;
+}
+
+.grid-texture {
+  background-image:
+    linear-gradient(rgba(164, 214, 208, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(164, 214, 208, 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black 10%, transparent 88%);
 }

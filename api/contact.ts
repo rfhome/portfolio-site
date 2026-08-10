@@ -42,7 +42,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     },
     body: JSON.stringify({
       from: 'Portfolio Contact <contact@catalystedgeconnect.com>',
-      to: ['rbfonseca.consulting@gmail.com'],
+      to: ['contact@rbfonseca.com'],
       reply_to: email,
       subject: `Portfolio message from ${name}`,
       html: `
