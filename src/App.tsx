@@ -65,7 +65,7 @@ function Hero() {
           </div>
         </div>
         <div className="mx-auto w-full max-w-[370px] md:mx-0 md:justify-self-end">
-          <div className="border border-teal-300/40 bg-teal-900 p-3">
+          <div className="border border-teal-300/35 shadow-[0_18px_45px_rgba(0,0,0,0.28)]">
             <img src="/images/headshot.png" alt="Roberto Fonseca" className="aspect-[4/5] w-full object-cover" style={{ objectPosition: '50% 15%' }} />
           </div>
           <div className="flex items-center justify-between border-x border-b border-white/15 px-4 py-3 text-xs text-dark-soft">
